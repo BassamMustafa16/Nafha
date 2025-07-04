@@ -3,16 +3,16 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="flex flex-row gap-5 items-center justify-center lg:text-xl ">
-      <Link href="/">Home</Link>
-      <Link href="/">About Us</Link>
-      <Link href="/" className="">
+    <nav className="flex flex-row gap-8 xl:gap-10 items-center justify-center lg:text-xl ">
+      <Link href="/" className="hover:font-semibold">Home</Link>
+      <Link href="/" className="hover:font-semibold">About Us</Link>
+      <Link href="/" className="hover:font-semibold">
         <div className="">
           <Image src="/logo.png" alt="Logo" width={256} height={60} />
         </div>
       </Link>
-      <Link href="/">Collection</Link>
-      <Link href="/">Contact Us</Link>
+      <Link href="/" className="hover:font-semibold">Collection</Link>
+      <Link href="/" className="hover:font-semibold">Contact Us</Link>
     </nav>
   );
 }

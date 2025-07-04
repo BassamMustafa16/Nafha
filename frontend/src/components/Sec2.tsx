@@ -12,7 +12,7 @@ export default function Sec2() {
           alt="sec 02"
           fill
           sizes="100vw"
-          className="object-cover object-top-left"
+          className="object-cover object-top-center"
         />
       </div>
 

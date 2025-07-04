@@ -13,7 +13,7 @@ export default function Sec4() {
           alt="last sec"
           fill
           sizes="100vw"
-          className="object-cover object-top-left"
+          className="object-cover object-top-center"
         />
       </div>
 

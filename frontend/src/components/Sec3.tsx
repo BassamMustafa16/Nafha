@@ -12,7 +12,7 @@ export default function Sec3() {
           alt="sec 03 01.png"
           fill
           sizes="33.33vw"
-          className="object-cover object-top-left"
+          className="object-cover object-top-center"
         />
         <button className="border opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-xl w-1/2 px-5 py-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer">
           Discover More
@@ -29,7 +29,7 @@ export default function Sec3() {
           alt="sec 03 02.png"
           fill
           sizes="33.33vw"
-          className="object-cover object-top-left"
+          className="object-cover object-top-center"
         />
         <button className="border opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-xl w-1/2 px-5 py-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer">
           Discover More
@@ -46,7 +46,7 @@ export default function Sec3() {
           alt="sec 03 03.png"
           fill
           sizes="33.33vw"
-          className="object-cover object-top-left"
+          className="object-cover object-top-center"
         />
         <button className="border opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-xl w-1/2 px-5 py-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer">
           Discover More

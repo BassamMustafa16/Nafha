@@ -17,9 +17,9 @@ export default function Sec5() {
 
       {/* Links */}
       <div className="flex gap-6 lg:text-xl">
-        <Link href="/">About Us</Link>
-        <Link href="/">Collection</Link>
-        <Link href="/">Contact Us</Link>
+        <Link href="/" className="hover:font-semibold">About Us</Link>
+        <Link href="/" className="hover:font-semibold">Collection</Link>
+        <Link href="/" className="hover:font-semibold">Contact Us</Link>
       </div>
     </div>
   );

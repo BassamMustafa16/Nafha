@@ -20,6 +20,7 @@ export default function Sec3Image({ imageName }: ImageName) {
         <video
           src={`/videos/${imageName.replace(".png", ".mp4")}`}
           autoPlay
+          preload="auto"
           muted
           loop
           className="w-full h-full object-cover"

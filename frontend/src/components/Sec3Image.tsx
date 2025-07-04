@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 
@@ -15,6 +15,9 @@ export default function Sec3Image({ imageName }: ImageName) {
     if (hovered && videoRef.current) {
       videoRef.current.currentTime = 0; // restart video
       videoRef.current.play();
+    } else if (!hovered && videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
     }
   }, [hovered]);
 

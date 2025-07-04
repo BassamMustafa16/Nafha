@@ -6,7 +6,7 @@ export default function Sec1() {
       {/* Image */}
       <div
         className="relative w-screen"
-        style={{ height: "calc(100vh - 0px)" }}
+        style={{ height: "100vh" }}
       >
         <Image
           src="/images/sec 01.png"

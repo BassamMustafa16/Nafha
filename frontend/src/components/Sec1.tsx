@@ -19,7 +19,7 @@ export default function Sec1() {
 
       {/* Text Content */}
       <div className="absolute pr-4 md:pr-8 lg:pr-16 xl:pr-32 2xl:pr-64 flex flex-col gap-10 top-1/2 -translate-y-1/2 left-1/2">
-        <h1 className="text-5xl">Crafted for Icons Made to Stand Alone</h1>
+        <h1 className="text-4xl">CRAFTED FOR ICONS MADE TO STAND ALONE</h1>
         <p className="text-xl">
           Nafha Thabet is a haute couture brand born from a deep reverence for
           bold femininity, sculptural elegance, and fearless self-expression.
@@ -29,7 +29,7 @@ export default function Sec1() {
           and hand-crafted to empower women to stand tall in their truth.
         </p>
         {/* Button */}
-        <button className="border py-3 px-10 text-xl w-fit cursor-pointer">
+        <button className="border hover:font-semibold py-3 px-10 text-xl w-fit cursor-pointer">
           Read More
         </button>
       </div>

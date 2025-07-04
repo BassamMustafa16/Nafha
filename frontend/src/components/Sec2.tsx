@@ -18,12 +18,12 @@ export default function Sec2() {
 
       {/* Text Content */}
       <div className="absolute px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 flex flex-col items-center gap-10 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-full">
-        <h1 className="text-5xl text-center">
-          Discover creations that speak power, precision, and pure
-          individuality.
+        <h1 className="text-4xl text-center">
+          DISCOVER CREATIONS THAT SPEAK POWER, PRECISION, AND PURE
+          INDIVIDUALITY.
         </h1>
         {/* Button */}
-        <button className="border py-3 px-10 text-xl w-fit cursor-pointer">
+        <button className="border hover:font-semibold py-3 px-10 text-xl w-fit cursor-pointer">
           DISCOVER THE COLLECTION
         </button>
       </div>

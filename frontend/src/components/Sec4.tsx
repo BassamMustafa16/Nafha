@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Sec4() {
   return (
-    <div className="relative text-white">
+    <section className="relative text-white">
       {/* Image */}
       <div
         className="relative w-screen"
@@ -31,6 +31,6 @@ export default function Sec4() {
           Discover More
         </button>
       </div>
-    </div>
+    </section>
   );
 }

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Sec6() {
+export default function Footer2() {
   return (
     <div className="px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 py-10 flex flex-row justify-between items-center">
       {/* Links */}

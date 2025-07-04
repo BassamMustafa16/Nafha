@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Nafha Thabet",
-  description: "Dress Designer",
+  description: "Fashion Designer",
 };
 
 export default function RootLayout({

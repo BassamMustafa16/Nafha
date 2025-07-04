@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Sec1() {
   return (
-    <div className="relative text-white">
+    <section className="relative text-white">
       {/* Image */}
       <div
         className="relative w-screen"
@@ -19,7 +19,7 @@ export default function Sec1() {
 
       {/* Text Content */}
       <div className="absolute pr-4 md:pr-8 lg:pr-16 xl:pr-32 2xl:pr-64 flex flex-col gap-10 top-1/2 -translate-y-1/2 left-1/2">
-        <h1 className="text-4xl">CRAFTED FOR ICONS MADE TO STAND ALONE</h1>
+        <h1 className="text-4xl">CRAFTED FOR ICONS <br/> MADE TO STAND ALONE</h1>
         <p className="text-xl">
           Nafha Thabet is a haute couture brand born from a deep reverence for
           bold femininity, sculptural elegance, and fearless self-expression.
@@ -33,6 +33,6 @@ export default function Sec1() {
           Read More
         </button>
       </div>
-    </div>
+    </section>
   );
 }

@@ -3,8 +3,8 @@ import Sec1 from "@/components/Sec1";
 import Sec2 from "@/components/Sec2";
 import Sec3 from "@/components/Sec3";
 import Sec4 from "@/components/Sec4";
-import Sec5 from "@/components/Sec5";
-import Sec6 from "@/components/Sec6";
+import Footer1 from "@/components/Footer1";
+import Footer2 from "@/components/Footer2";
 
 export default function Home() {
   return (
@@ -14,8 +14,10 @@ export default function Home() {
       <Sec2 />
       <Sec3 />
       <Sec4 />
-      <Sec5 />
-      <Sec6 />
+      <footer>
+        <Footer1 />
+        <Footer2 />
+      </footer>
     </div>
   );
 }

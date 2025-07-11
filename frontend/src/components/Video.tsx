@@ -1,12 +1,12 @@
 export default function Video() {
   return (
-    <div className="w-full h-auto">
+    <div className="w-auto h-[100vh]">
       <video
-        src="/videos/sec 01 video edit.mp4"
+        src="/videos/sec 01 video.mp4"
         autoPlay
         muted
         loop
-        className="w-full h-auto"
+        className="w-auto h-[100vh] object-cover"
       />
     </div>
   );

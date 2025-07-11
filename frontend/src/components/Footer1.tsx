@@ -17,9 +17,15 @@ export default function Footer1() {
 
       {/* Links */}
       <div className="flex gap-6 lg:text-xl">
-        <Link href="/" className="hover:font-semibold">About Us</Link>
-        <Link href="/" className="hover:font-semibold">Collection</Link>
-        <Link href="/" className="hover:font-semibold">Contact Us</Link>
+        <Link href="/" className="hover:font-semibold">
+          About Us
+        </Link>
+        <Link href="/" className="hover:font-semibold">
+          Collection
+        </Link>
+        <Link href="/" className="hover:font-semibold">
+          Contact Us
+        </Link>
       </div>
     </div>
   );

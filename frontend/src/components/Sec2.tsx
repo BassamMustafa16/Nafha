@@ -3,10 +3,7 @@ export default function Sec2() {
   return (
     <section className="relative text-white">
       {/* Image */}
-      <div
-        className="relative w-screen"
-        style={{ height: "calc(100vh - 0px)" }}
-      >
+      <div className="relative w-screen h-[100vh]">
         <Image
           src="/images/sec 02.png"
           alt="sec 02"
@@ -23,7 +20,7 @@ export default function Sec2() {
           PRECISION, AND PURE INDIVIDUALITY.
         </h1>
         {/* Button */}
-        <button className="border hover:font-semibold py-3 px-10 text-xl w-fit cursor-pointer">
+        <button className="border-t border-b hover:font-semibold py-3 px-10 text-xl w-fit cursor-pointer">
           DISCOVER THE COLLECTION
         </button>
       </div>

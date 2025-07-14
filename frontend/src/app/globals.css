@@ -18,6 +18,12 @@ body {
   font-family: "Graphik", sans-serif;
 }
 
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
 
 h1 {
   font-family: "Audrey", sans-serif;

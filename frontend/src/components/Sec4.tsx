@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Sec4() {
   return (
-    <section className="md:relative bg-white z-20">
+    <section className="md:relative bg-white z-20 my-10">
       {/* Image */}
       <div className="relative w-[full] h-[100vh]">
         <Image
@@ -23,7 +23,7 @@ export default function Sec4() {
 
       {/* Text Content */}
       <div
-        className="md:absolute px-4 md:pl-0 md:pr-8 lg:pr-16 xl:pr-32 2xl:pr-64 flex flex-col gap-10 md:top-1/2 md:-translate-y-1/2 md:left-1/2 py-10 md:py-0 bg-[url('/images/last-sec-background.png')] bg-cover bg-center bg-no-repeat
+        className="md:absolute px-4 md:pl-0 md:pr-8 lg:pr-16 xl:pr-32 2xl:pr-64 flex flex-col gap-5 md:gap-10 md:top-1/2 md:-translate-y-1/2 md:left-1/2 py-10 md:py-0 bg-[url('/images/last-sec-background.png')] bg-cover bg-center bg-no-repeat
 "
       >
         <h1 className="text-xl md:text-2xl lg:text-4xl">THE ARCHIVE</h1>

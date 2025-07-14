@@ -23,7 +23,7 @@ export default function Sec3Image({ imageName }: ImageName) {
 
   return (
     <div
-      className="relative w-screen group cursor-pointer h-[100vh]"
+      className="relative group cursor-pointer w-full aspect-[0.6]"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -32,7 +32,7 @@ export default function Sec3Image({ imageName }: ImageName) {
         src={`/images/${imageName}`}
         alt={imageName}
         fill
-        sizes="33.33vw"
+        sizes="100vw"
         className="object-cover object-top-center transition-opacity duration-300"
         style={{ opacity: hovered ? 0 : 1 }}
       />

@@ -20,7 +20,7 @@ export default function Home() {
       <Sec1 />
       <Slider />
       <Sec2 />
-      <Sec2Text />
+      {/* <Sec2Text /> */}
       <Sec3 />
       <Sec4 />
       <footer className="z-20">

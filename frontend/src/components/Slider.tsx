@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Slider() {
   return (
-    <section className="relative px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 w-full h-[145vw] md:h-[100vh]">
+    <section className="relative px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 w-full py-10">
       <Swiper
         modules={[Navigation]}
         spaceBetween={20}
@@ -27,8 +27,8 @@ export default function Slider() {
           "/images/slider/gold-dress.png",
           "/images/slider/mint-dress.png",
         ].map((src, i) => (
-          <SwiperSlide key={i} className="">
-            <div className="relative w-full h-full">
+          <SwiperSlide key={i}>
+            <div className="relative w-full aspect-[0.69]">
               <Image
                 src={src}
                 alt="Dress"

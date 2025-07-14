@@ -5,7 +5,7 @@ export default function Footer1() {
   return (
     <div className="px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative bg-white flex flex-col gap-10 py-10 ">
       {/* Logo */}
-      <div className="relative w-[70vw] md:w-[40vw] lg:w-[30vw] h-[13vw] md:h-[7.6vw] lg:h-[5.7vw]">
+      <div className="relative w-[50vw] md:w-[30vw] lg:w-[22vw] aspect-[5.247]">
         <Image
           src="/full-logo.png"
           alt="Full Logo"
@@ -16,7 +16,7 @@ export default function Footer1() {
       </div>
 
       {/* Text */}
-      <div className="flex flex-col lg:flex-row gap-10 text-sm md:text-base xl:text-xl ">
+      <div className="flex flex-col lg:flex-row justify-between gap-10 text-sm md:text-base xl:text-xl ">
         <p className="max-w-sm xl:max-w-md">
           Natha Thabet is a haute couture brand born from a deep reverence for
           bold femininity, sculptural elegance, and fearless self-expression.{" "}

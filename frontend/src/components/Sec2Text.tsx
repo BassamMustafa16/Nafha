@@ -13,7 +13,7 @@ export default function Sec2Text() {
         const windowHeight = window.innerHeight;
 
         const elementCenter = rect.top + rect.height / 2;
-        const progress = 1 - (elementCenter / windowHeight);
+        const progress = 1 - (elementCenter / windowHeight) + 0.5;
         // progress: 0 = bottom, 0.5 = middle, 1 = top
 
         let localOpacity = 1 - Math.abs(progress - 0.5) * 2;
@@ -31,7 +31,7 @@ export default function Sec2Text() {
   return (
     <div
       ref={textRef}
-      className="flex flex-col items-center gap-10 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 z-10 h-screen text-white"
+      className="flex flex-col gap-10 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 z-10 h-screen items-center text-white"
       style={{
         opacity,
         transition: 'opacity 0.1s',

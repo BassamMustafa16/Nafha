@@ -19,7 +19,7 @@ export default function Video() {
   }, []);
 
   return (
-    <div className="relative w-full md:h-[100vh] border">
+    <div className="relative w-full md:h-[100vh]">
       <video
         src={videoSrc}
         autoPlay

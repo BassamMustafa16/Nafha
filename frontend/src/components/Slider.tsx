@@ -21,21 +21,41 @@ export default function Slider() {
         breakpoints={{ 767: { slidesPerView: 2 }, 1023: { slidesPerView: 3 } }}
       >
         {[
-          "/images/slider/black-dress.png",
-          "/images/slider/green-dress.png",
-          "/images/slider/white-dress.png",
-          "/images/slider/gold-dress.png",
-          "/images/slider/mint-dress.png",
-        ].map((src, i) => (
+          {
+            name: "Noir Reverie Gown",
+            image: "/images/slider/black-dress.png",
+          },
+          {
+            name: "Emerald Enchantress Gown",
+            image: "/images/slider/green-dress.png",
+          },
+          {
+            name: "Ivory Muse Gown",
+            image: "/images/slider/white-dress.png",
+          },
+          {
+            name: "Golden Whimsy Off-Shoulder Gown",
+            image: "/images/slider/gold-dress.png",
+          },
+          {
+            name: "Emerald Allure Draped Gown",
+            image: "/images/slider/mint-dress.png",
+          },
+        ].map((dress, i) => (
           <SwiperSlide key={i}>
-            <div className="relative w-full aspect-[0.69]">
-              <Image
-                src={src}
-                alt="Dress"
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 66vw, 33vw"
-                className="object-contain"
-              />
+            <div className="relative">
+              <div className="relative w-full aspect-[0.69]">
+                <Image
+                  src={dress.image}
+                  alt="Dress"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 66vw, 33vw"
+                  className="object-contain"
+                />
+              </div>
+              <div className="absolute text-white w-full text-center top-13/16 px-3 left-1/2 -translate-x-1/2">
+                <p>{dress.name}</p>
+              </div>
             </div>
           </SwiperSlide>
         ))}

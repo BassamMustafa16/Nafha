@@ -28,9 +28,9 @@ export default function Video() {
         className="w-full md:h-[100vh] object-cover"
       />
       <div className="flex flex-col gap-5 text-white w-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-30 text-center items-center">
-        <h1 className="md:text-2xl lg:text-4xl">
+        <h1 className="md:text-2xl lg:text-4xl leading-7 md:leading-10 lg:leading-15">
           LUXURY IN EVERY STITCH.
-          <div className="h-3"></div>
+          <br />
           BOLD IN EVERY LOOK. ICONIC BY DESIGN.
         </h1>
         <button className="border border-white hover:bg-white hover:text-black py-2 md:py-3 px-3 md:px-10 md:text-xl w-fit transition-all duration-300 backdrop-blur-sm">

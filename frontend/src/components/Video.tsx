@@ -26,6 +26,7 @@ export default function Video() {
         muted
         loop
         playsInline
+        preload="auto"
         controls={false}
         className="w-full md:h-[100vh] object-cover"
       />

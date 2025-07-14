@@ -8,7 +8,7 @@ import Footer1 from "@/components/Footer1";
 import Footer2 from "@/components/Footer2";
 import Video from "@/components/Video";
 import Slider from "@/components/Slider";
-import Sec2Text from "@/components/Sec2Text";
+// import Sec2Text from "@/components/Sec2Text";
 
 export default function Home() {
   return (

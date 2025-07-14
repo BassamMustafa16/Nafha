@@ -15,7 +15,7 @@ export default function Sec1() {
           and hand-crafted to empower women to stand tall in their truth.
         </p>
         {/* Button */}
-        <button className="border-l border-r hover:font-semibold py-3 px-10 text-xl w-fit cursor-pointer">
+        <button className="border hover:font-semibold py-3 px-10 text-xl w-fit cursor-pointer">
           Read More
         </button>
       </div>

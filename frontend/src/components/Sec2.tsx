@@ -20,7 +20,7 @@ export default function Sec2() {
           PRECISION, AND PURE INDIVIDUALITY.
         </h1>
         {/* Button */}
-        <button className="border-t border-b hover:font-semibold py-3 px-10 text-xl w-fit cursor-pointer">
+        <button className="border hover:font-semibold py-3 px-10 text-xl w-fit cursor-pointer">
           DISCOVER THE COLLECTION
         </button>
       </div>

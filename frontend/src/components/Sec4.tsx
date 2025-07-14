@@ -27,7 +27,7 @@ export default function Sec4() {
         </p>
 
         {/* Button */}
-        <button className="border-b hover:font-semibold py-3 px-10 text-xl w-fit cursor-pointer">
+        <button className="border hover:font-semibold py-3 px-10 text-xl w-fit cursor-pointer">
           Discover More
         </button>
       </div>

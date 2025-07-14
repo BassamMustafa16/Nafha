@@ -4,7 +4,7 @@ export default function Sec4() {
   return (
     <section className="md:relative bg-white z-20 mb-10">
       {/* Image */}
-      <div className="relative w-[full] h-[100vh]">
+      <div className="relative w-[full] aspect-[0.562] md:aspect-[1.78]">
         <Image
           src="/images/last sec mobile.png"
           alt="last sec"

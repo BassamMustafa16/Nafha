@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Sec2() {
   return (
-    <section className="relative h-screen my-10">
+    <section className="relative h-screen mt-10">
       {/* Sticky Parallax Image */}
       <div className="relative w-full h-screen">
         <Image

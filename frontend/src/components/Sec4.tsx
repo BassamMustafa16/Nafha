@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Sec4() {
   return (
-    <section className="md:relative bg-white z-20 my-10">
+    <section className="md:relative bg-white z-20 mb-10">
       {/* Image */}
       <div className="relative w-[full] h-[100vh]">
         <Image

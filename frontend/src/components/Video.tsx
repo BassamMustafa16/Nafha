@@ -26,6 +26,7 @@ export default function Video() {
         muted
         loop
         playsInline
+        controls={false}
         className="w-full md:h-[100vh] object-cover"
       />
       <div className="flex flex-col gap-5 text-white w-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-30 text-center items-center">

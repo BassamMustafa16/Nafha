@@ -8,16 +8,17 @@ import Image from "next/image";
 
 export default function Slider() {
   return (
-    <section className="relative px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 w-full h-[100vh]">
+    <section className="relative px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 w-full h-[145vw] md:h-[100vh]">
       <Swiper
         modules={[Navigation]}
         spaceBetween={20}
-        slidesPerView={3}
+        slidesPerView={1}
         className="h-full custom-swiper"
         navigation={{
           nextEl: ".custom-next",
           prevEl: ".custom-prev",
         }}
+        breakpoints={{ 767: { slidesPerView: 2 }, 1023: { slidesPerView: 3 } }}
       >
         {[
           "/images/slider/black-dress.png",
@@ -32,14 +33,14 @@ export default function Slider() {
                 src={src}
                 alt="Dress"
                 fill
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 66vw, 33vw"
                 className="object-contain"
               />
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-      <button className="custom-prev absolute top-1/2 -translate-y-1/2 left-4 md:left-8 lg:left-16 xl:left-32 2xl:left-64 z-10 bg-white w-10 aspect-square rounded-full flex justify-center items-center -translate-x-1/2 shadow-[0px_2px_8px_#00000033] disabled:opacity-50 p-4">
+      <button className="custom-prev absolute top-1/2 -translate-y-1/2 left-4 md:left-8 lg:left-16 xl:left-32 2xl:left-64 z-10 bg-white w-10 aspect-square rounded-full flex justify-center items-center md:-translate-x-1/2 shadow-[0px_2px_8px_#00000033] disabled:opacity-50 p-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 384 512"
@@ -49,7 +50,7 @@ export default function Slider() {
           <path d="M380.6 81.7c7.9 15.8 1.5 35-14.3 42.9L103.6 256 366.3 387.4c15.8 7.9 22.2 27.1 14.3 42.9s-27.1 22.2-42.9 14.3l-320-160C6.8 279.2 0 268.1 0 256s6.8-23.2 17.7-28.6l320-160c15.8-7.9 35-1.5 42.9 14.3z" />
         </svg>
       </button>
-      <button className="custom-next absolute top-1/2 -translate-y-1/2 right-4 md:right-8 lg:right-16 xl:right-32 2xl:right-64 z-10 bg-white w-10 aspect-square rounded-full flex justify-center items-center translate-x-1/2 shadow-[0px_2px_8px_#00000033] disabled:opacity-50 p-4">
+      <button className="custom-next absolute top-1/2 -translate-y-1/2 right-4 md:right-8 lg:right-16 xl:right-32 2xl:right-64 z-10 bg-white w-10 aspect-square rounded-full flex justify-center items-center md:translate-x-1/2 shadow-[0px_2px_8px_#00000033] disabled:opacity-50 p-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 384 512"

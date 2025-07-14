@@ -23,8 +23,7 @@ export default function Sec3Image({ imageName }: ImageName) {
 
   return (
     <div
-      className="relative w-screen group cursor-pointer"
-      style={{ height: "100vh" }}
+      className="relative w-screen group cursor-pointer h-[100vh]"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -51,12 +50,10 @@ export default function Sec3Image({ imageName }: ImageName) {
       />
 
       {/* Button & overlay */}
-      <button className="border opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-xl w-1/2 px-5 py-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hover:font-semibold">
+      <button className="border border-white opacity-0 group-hover:opacity-100 transition-all duration-300 text-white md:text-xl w-1/2 px-3 py-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hover:bg-white hover:text-black backdrop-blur-sm">
         Discover More
       </button>
       <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
     </div>
   );
 }
-
-

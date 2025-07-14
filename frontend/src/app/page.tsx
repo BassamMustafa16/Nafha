@@ -21,7 +21,7 @@ export default function Home() {
       <Sec2 />
       <Sec3 />
       <Sec4 />
-      <footer>
+      <footer className="z-20">
         <Footer1 />
         <Footer2 />
       </footer>

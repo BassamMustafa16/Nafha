@@ -58,3 +58,5 @@ export default function Sec3Image({ imageName }: ImageName) {
     </div>
   );
 }
+
+

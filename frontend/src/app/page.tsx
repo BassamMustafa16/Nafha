@@ -1,3 +1,4 @@
+// Page.tsx
 import Navbar from "@/components/Navbar";
 import Sec1 from "@/components/Sec1";
 import Sec2 from "@/components/Sec2";

@@ -52,7 +52,7 @@ export default function Navbar() {
             Home
           </Link>
           <Link href="/about" className="hover:font-semibold">
-            About&nbsp;Us
+            About
           </Link>
           <Link href="/" className="hidden md:flex">
             <div className="md:w-[180px] lg:w-[256px]">
@@ -65,7 +65,7 @@ export default function Navbar() {
               />
             </div>
           </Link>
-          <Link href="/" className="hover:font-semibold">
+          <Link href="/collection" className="hover:font-semibold">
             Collection
           </Link>
           <Link href="/" className="hover:font-semibold">

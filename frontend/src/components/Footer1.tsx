@@ -26,10 +26,10 @@ export default function Footer1() {
         <div className="flex flex-col md:flex-row gap-10 md:gap-15 ">
           <div className="flex flex-col gap-3 ">
             <h3 className="font-semibold mb-2">Site Map</h3>
-            <Link href="/" className="hover:font-semibold">
+            <Link href="/about" className="hover:font-semibold">
               About Us
             </Link>
-            <Link href="/" className="hover:font-semibold">
+            <Link href="/collection" className="hover:font-semibold">
               Collection
             </Link>
             <Link href="/" className="hover:font-semibold">

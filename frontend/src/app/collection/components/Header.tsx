@@ -6,7 +6,7 @@ export default function Header() {
       {/* Image */}
       <div className="relative w-full aspect-[1.5] md:aspect-[2] lg:aspect-[2.5] xl:aspect-[2.74]">
         <Image
-          src="/images/about-header.png"
+          src="/images/collections-header.png"
           alt="Header"
           fill
           sizes="100vw"
@@ -28,8 +28,12 @@ export default function Header() {
           lg:h-[calc(100%-110px)] 
         "
       >
-        <h1 className="text-lg md:text-xl lg:text-2xl xl:text-4xl">ABOUT US</h1>
-        <p className="lg:text-lg xl:text-2xl">Crafted for Icons Made to Stand Alone</p>
+        <h1 className="text-lg md:text-xl lg:text-2xl xl:text-4xl">
+          COLLECTIONS
+        </h1>
+        <p className="lg:text-lg xl:text-2xl">
+          The Archive
+        </p>
       </div>
 
       {/* Color overlay */}

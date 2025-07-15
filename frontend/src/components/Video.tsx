@@ -19,7 +19,7 @@ export default function Video() {
   }, []);
 
   return (
-    <div className="relative w-full aspect-[0.673] md:aspect-auto md:h-[100vh]">
+    <section className="relative w-full aspect-[0.673] md:aspect-auto md:h-[100vh]">
       <video
         src={videoSrc}
         autoPlay
@@ -40,6 +40,6 @@ export default function Video() {
           DISCOVER MORE
         </button>
       </div>
-    </div>
+    </section>
   );
 }

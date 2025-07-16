@@ -2,15 +2,16 @@ import PagesHeader from "@/components/PagesHeader";
 import { data } from "@/app/constants/dressesData";
 import { notFound } from "next/navigation";
 
-
-export default function CollectionInnerPage({
+export default async function CollectionInnerPage({
   params,
 }: {
-  params: { dressSlug: string };
+  params: Promise<{ dressSlug: string }>;
 }) {
-  const { dressSlug } = params;
+  const { dressSlug } = await params;
   const dress = data.find((dress) => dress.slug === dressSlug);
+  
   if (!dress) return notFound();
+  
   return (
     <main>
       <PagesHeader

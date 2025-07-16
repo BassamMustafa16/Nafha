@@ -46,7 +46,7 @@ export default function Navbar() {
           ${showNavs ? "max-h-[500px]" : "max-h-0"}
           md:max-h-none`}
       >
-        <div className="flex flex-col md:flex-row gap-5 items-center py-5 md:py-0 xl:text-2xl">
+        <div className="flex flex-col md:flex-row gap-5 items-center pb-5 pt-10 md:py-0 xl:text-2xl">
           <Link
             href="/"
             className="hover:font-semibold"

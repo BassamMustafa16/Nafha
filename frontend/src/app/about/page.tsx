@@ -1,10 +1,14 @@
+import PagesHeader from "@/components/PagesHeader";
 import Content from "./components/Content";
-import Header from "./components/Header";
 
 export default function AboutPage() {
   return (
     <main>
-      <Header />
+      <PagesHeader
+        image="about-header"
+        heading="ABOUT US"
+        text="Crafted for Icons Made to Stand Alone"
+      />
       <Content />
     </main>
   );

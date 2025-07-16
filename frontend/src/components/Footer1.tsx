@@ -32,7 +32,7 @@ export default function Footer1() {
             <Link href="/collection" className="hover:font-semibold">
               Collection
             </Link>
-            <Link href="/" className="hover:font-semibold">
+            <Link href="/contact" className="hover:font-semibold">
               Contact Us
             </Link>
           </div>

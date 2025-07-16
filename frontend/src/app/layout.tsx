@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={`antialiased`}>
         <Navbar />
         {children}
-        <footer className="border-t border-gray-300">
+        <footer className="border-t border-gray-300 mt-20">
           <Footer1 />
           <Footer2 />
         </footer>

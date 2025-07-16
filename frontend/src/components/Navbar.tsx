@@ -68,7 +68,7 @@ export default function Navbar() {
           <Link href="/collection" className="hover:font-semibold">
             Collection
           </Link>
-          <Link href="/" className="hover:font-semibold">
+          <Link href="/contact" className="hover:font-semibold">
             Contact&nbsp;Us
           </Link>
         </div>

@@ -20,7 +20,7 @@ export default function Header() {
           absolute inset-0 md:left-0 md:right-0 
           flex flex-col items-center gap-1 justify-center 
           text-white z-10
-          font-extralight
+          font-light
           md:top-[77px] 
           md:h-[calc(100%-77px)] 
           md:gap-2

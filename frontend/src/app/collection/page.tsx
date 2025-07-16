@@ -5,7 +5,7 @@ export default function CollectionsPage() {
   return (
     <main className="flex flex-col gap-10 lg:gap-20 lg:mb-20">
       <PagesHeader
-        image="collection-header"
+        image="images/collection-header"
         heading="COLLECTIONS"
         text="The Archive"
       />

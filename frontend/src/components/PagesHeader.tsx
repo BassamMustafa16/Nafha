@@ -14,11 +14,11 @@ export default function PagesHeader({
       {/* Image */}
       <div className="relative w-full aspect-[1.5] md:aspect-[2] lg:aspect-[2.5] xl:aspect-[2.74]">
         <Image
-          src={`/images/${image}.png`}
+          src={`/${image}.png`}
           alt="Header"
           fill
           sizes="100vw"
-          className="object-cover object-left-top"
+          className="object-cover object-center"
         />
       </div>
 

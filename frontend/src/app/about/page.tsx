@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <main>
       <PagesHeader
-        image="about-header"
+        image="images/about-header"
         heading="ABOUT US"
         text="Crafted for Icons Made to Stand Alone"
       />

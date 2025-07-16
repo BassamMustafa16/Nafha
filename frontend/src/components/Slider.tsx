@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
 import { data } from "@/app/constants/dressesData";
+import Link from "next/link";
 
 export default function Slider() {
   return (
@@ -25,24 +26,26 @@ export default function Slider() {
           .filter((dress) => dress.id <= 5)
           .map((dress) => (
             <SwiperSlide key={dress.id}>
-              <div className="relative">
-                <div className="relative w-full aspect-[0.69]">
-                  <Image
-                    src={dress.image}
-                    alt="Dress"
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 66vw, 33vw"
-                    className="object-contain"
-                  />
+              <Link href={`collection/${dress.slug}`}>
+                <div className="relative">
+                  <div className="relative w-full aspect-[0.69]">
+                    <Image
+                      src={dress.image}
+                      alt="Dress"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 66vw, 33vw"
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="absolute text-white w-full text-center top-13/16 px-3 left-1/2 -translate-x-1/2">
+                    <p>{dress.name}</p>
+                  </div>
                 </div>
-                <div className="absolute text-white w-full text-center top-13/16 px-3 left-1/2 -translate-x-1/2">
-                  <p>{dress.name}</p>
-                </div>
-              </div>
+              </Link>
             </SwiperSlide>
           ))}
       </Swiper>
-      <button className="custom-prev absolute top-1/2 -translate-y-1/2 left-4 md:left-8 lg:left-16 xl:left-32 2xl:left-64 z-10 bg-white w-10 aspect-square rounded-full flex justify-center items-center md:-translate-x-1/2 shadow-[0px_2px_8px_#00000033] disabled:opacity-50 p-4">
+      <button className="custom-prev absolute top-1/2 -translate-y-1/2 left-4 md:left-8 lg:left-16 xl:left-32 2xl:left-64 z-10 bg-white w-10 aspect-square rounded-full flex justify-center items-center md:-translate-x-1/2 shadow-[0px_2px_8px_#00000033] disabled:opacity-30 p-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 384 512"
@@ -52,7 +55,7 @@ export default function Slider() {
           <path d="M380.6 81.7c7.9 15.8 1.5 35-14.3 42.9L103.6 256 366.3 387.4c15.8 7.9 22.2 27.1 14.3 42.9s-27.1 22.2-42.9 14.3l-320-160C6.8 279.2 0 268.1 0 256s6.8-23.2 17.7-28.6l320-160c15.8-7.9 35-1.5 42.9 14.3z" />
         </svg>
       </button>
-      <button className="custom-next absolute top-1/2 -translate-y-1/2 right-4 md:right-8 lg:right-16 xl:right-32 2xl:right-64 z-10 bg-white w-10 aspect-square rounded-full flex justify-center items-center md:translate-x-1/2 shadow-[0px_2px_8px_#00000033] disabled:opacity-50 p-4">
+      <button className="custom-next absolute top-1/2 -translate-y-1/2 right-4 md:right-8 lg:right-16 xl:right-32 2xl:right-64 z-10 bg-white w-10 aspect-square rounded-full flex justify-center items-center md:translate-x-1/2 shadow-[0px_2px_8px_#00000033] disabled:opacity-30 p-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 384 512"

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Sec2() {
   return (
@@ -19,9 +20,11 @@ export default function Sec2() {
           DISCOVER CREATIONS THAT SPEAK POWER, <br />
           PRECISION, AND PURE INDIVIDUALITY.
         </h1>
-        <button className="border border-white hover:bg-white hover:text-black py-3 px-5 md:px-10 md:text-xl w-fit transition-all duration-300 backdrop-blur-sm">
-          DISCOVER THE COLLECTION
-        </button>
+        <Link href="/collection">
+          <button className="border border-white hover:bg-white hover:text-black py-3 px-5 md:px-10 md:text-xl w-fit transition-all duration-300 backdrop-blur-sm">
+            DISCOVER THE COLLECTION
+          </button>
+        </Link>
       </div>
     </section>
   );

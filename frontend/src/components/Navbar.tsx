@@ -46,12 +46,19 @@ export default function Navbar() {
           ${showNavs ? "max-h-[500px]" : "max-h-0"}
           md:max-h-none`}
       >
-        {/* Desktop Nav */}
         <div className="flex flex-col md:flex-row gap-5 items-center py-5 md:py-0 xl:text-2xl">
-          <Link href="/" className="hover:font-semibold">
+          <Link
+            href="/"
+            className="hover:font-semibold"
+            onClick={() => setShowNavs(false)}
+          >
             Home
           </Link>
-          <Link href="/about" className="hover:font-semibold">
+          <Link
+            href="/about"
+            className="hover:font-semibold"
+            onClick={() => setShowNavs(false)}
+          >
             About
           </Link>
           <Link href="/" className="hidden md:flex">
@@ -65,10 +72,18 @@ export default function Navbar() {
               />
             </div>
           </Link>
-          <Link href="/collection" className="hover:font-semibold">
+          <Link
+            href="/collection"
+            className="hover:font-semibold"
+            onClick={() => setShowNavs(false)}
+          >
             Collection
           </Link>
-          <Link href="/contact" className="hover:font-semibold">
+          <Link
+            href="/contact"
+            className="hover:font-semibold"
+            onClick={() => setShowNavs(false)}
+          >
             Contact&nbsp;Us
           </Link>
         </div>

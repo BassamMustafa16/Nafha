@@ -46,15 +46,13 @@ import Content from "./components/Content";
 
 export default function AboutPage() {
   return (
-    <>
+    <main>
       <PagesHeader
         image="images/about-header"
         heading="ABOUT US"
         text="Crafted for Icons Made to Stand Alone"
       />
-      <main>
-        <Content />
-      </main>
-    </>
+      <Content />
+    </main>
   );
 }

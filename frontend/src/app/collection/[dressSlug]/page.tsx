@@ -61,18 +61,16 @@ export default async function CollectionInnerPage({
   if (!dress) return notFound();
 
   return (
-    <>
+    <main className="flex flex-col gap-10 md:gap-0">
       <PagesHeader
         image={`products/${dress.name}/header`}
         heading="COLLECTIONS"
         text={dress.name}
       />
-      <main className="flex flex-col gap-10 md:gap-0">
-        <Sec1 name={dress.name} description={dress.description} />
-        <Video name={dress.name} />
-        <Gallery name={dress.name} />
-        <Slider name={dress.name} />
-      </main>
-    </>
+      <Sec1 name={dress.name} description={dress.description} />
+      <Video name={dress.name} />
+      <Gallery name={dress.name} />
+      <Slider name={dress.name} />
+    </main>
   );
 }

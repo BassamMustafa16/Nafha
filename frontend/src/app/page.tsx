@@ -49,15 +49,13 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <>
+    <main className="flex flex-col">
       <Video />
-      <main className="flex flex-col">
-        <Sec1 />
-        <Slider />
-        <Sec2 />
-        <Sec3 />
-        <Sec4 />
-      </main>
-    </>
+      <Sec1 />
+      <Slider />
+      <Sec2 />
+      <Sec3 />
+      <Sec4 />
+    </main>
   );
 }

@@ -20,7 +20,7 @@ export default function Sec2() {
           DISCOVER CREATIONS THAT SPEAK POWER, <br />
           PRECISION, AND PURE INDIVIDUALITY.
         </h1>
-        <Link href="/collection">
+        <Link href="/collection/ivory-muse-gown">
           <button className="border border-white hover:bg-white hover:text-black py-3 px-5 md:px-10 md:text-xl w-fit transition-all duration-300 backdrop-blur-sm">
             DISCOVER THE COLLECTION
           </button>

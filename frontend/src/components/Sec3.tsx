@@ -1,12 +1,16 @@
-import Sec3Image from "./Sec3Image";
+import Sec3Element from "./Sec3element";
 
-const images = ["sec 03 01.png", "sec 03 02.png", "sec 03 03.png"];
+const elements = [
+  { image: "sec 03 01.png", slug: "emerald-allure-draped-gown" },
+  { image: "sec 03 02.png", slug: "noir-reverie-gown" },
+  { image: "sec 03 03.png", slug: "ivory-muse-gown" },
+];
 
 export default function Sec3() {
   return (
-    <section className="flex flex-col md:flex-row z-20 bg-white">
-      {images.map((name) => (
-        <Sec3Image key={name} imageName={name} />
+    <section className="flex flex-col md:flex-row md:justify-center z-20 bg-[#E7E7E7]">
+      {elements.map((element, i) => (
+        <Sec3Element key={i} imageName={element.image} slug={element.slug} />
       ))}
     </section>
   );

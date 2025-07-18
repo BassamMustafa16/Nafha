@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Video() {
@@ -36,9 +37,11 @@ export default function Video() {
           <br />
           BOLD IN EVERY LOOK. ICONIC BY DESIGN.
         </h1>
-        <button className="border border-white hover:bg-white hover:text-black py-2 md:py-3 px-3 md:px-10 md:text-xl w-fit transition-all duration-300 backdrop-blur-sm">
-          DISCOVER MORE
-        </button>
+        <Link href="/collection">
+          <button className="border border-white hover:bg-white hover:text-black py-2 md:py-3 px-3 md:px-10 md:text-xl w-fit transition-all duration-300 backdrop-blur-sm">
+            DISCOVER MORE
+          </button>
+        </Link>
       </div>
     </section>
   );

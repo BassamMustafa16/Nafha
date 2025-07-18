@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Sec1() {
   return (
     <section className="px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 flex flex-col items-center justify-center py-10 md:py-20">
@@ -15,9 +17,11 @@ export default function Sec1() {
           and hand-crafted to empower women to stand tall in their truth.
         </p>
         {/* Button */}
-        <button className="border py-3 px-10 lg:text-xl w-fit hover:bg-black hover:text-white transition-all duration-300">
-          Read More
-        </button>
+        <Link href="/about">
+          <button className="border py-3 px-10 lg:text-xl w-fit hover:bg-black hover:text-white transition-all duration-300">
+            Read More
+          </button>
+        </Link>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Sec4() {
   return (
@@ -34,9 +35,11 @@ export default function Sec4() {
         </p>
 
         {/* Button */}
-        <button className="border py-3 px-5 md:px-10 md:text-xl w-fit hover:bg-black hover:text-white transition-all duration-300">
-          Discover More
-        </button>
+        <Link href="/collection">
+          <button className="border py-3 px-5 md:px-10 md:text-xl w-fit hover:bg-black hover:text-white transition-all duration-300">
+            Discover More
+          </button>
+        </Link>
       </div>
     </section>
   );

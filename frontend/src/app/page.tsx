@@ -8,8 +8,7 @@ import Video from "@/components/Video";
 import Slider from "@/components/Slider";
 
 export const metadata = {
-  title:
-    "Nafha Thabet | Soirée Collection – Bold Couture Gowns for Unforgettable Moments",
+  title: "Nafha Thabet | LUXURY IN EVERY STITCH.",
   description:
     "Step into Nafha Thabet’s Soirée Collection – a world of bold couture gowns crafted with luxury, individuality, and fearless femininity. Discover dramatic silhouettes, intricate details, and timeless elegance.",
   keywords: [
@@ -22,7 +21,7 @@ export const metadata = {
     "haute couture",
   ],
   openGraph: {
-    title: "Nafha Thabet | Soirée Collection – Bold Couture Gowns",
+    title: "Nafha Thabet | LUXURY IN EVERY STITCH.",
     description:
       "Explore dramatic silhouettes and bold femininity with Nafha Thabet’s Soirée Collection. Where every stitch speaks luxury and individuality.",
     url: websiteUrl,

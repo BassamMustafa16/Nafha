@@ -3,9 +3,10 @@ import { Metadata } from "next";
 export async function generateMetadata({
   params,
 }: {
-  params: { dressSlug: string };
+  params: Promise<{ dressSlug: string }>; // Changed: params is now a Promise
 }): Promise<Metadata> {
-  const dress = data.find((dress) => dress.slug === params.dressSlug);
+  const { dressSlug } = await params; // Changed: await the params
+  const dress = data.find((dress) => dress.slug === dressSlug);
 
   if (!dress) {
     return {
@@ -18,7 +19,9 @@ export async function generateMetadata({
 
   return {
     title: dress.name,
-    description: dress.description?.split("\n")[0] || "Explore our exclusive dress collection.",
+    description:
+      dress.description?.split("\n")[0] ||
+      "Explore our exclusive dress collection.",
     openGraph: {
       title: dress.name,
       description: dress.description?.split("\n")[0] || "",
@@ -40,7 +43,6 @@ export async function generateMetadata({
     },
   };
 }
-
 
 import PagesHeader from "@/components/PagesHeader";
 import { data } from "@/app/constants/dressesData";

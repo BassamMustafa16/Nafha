@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { websiteUrl, websitePreview } from "@/app/constants/metaData";
 
 export async function generateMetadata({
   params,
@@ -14,9 +15,6 @@ export async function generateMetadata({
     };
   }
 
-  const websiteUrl = "https://nafha-bassammustafa16s-projects.vercel.app/";
-  const imagePath = `/products/${dress.name}/hero.png`;
-
   return {
     title: dress.name,
     description:
@@ -28,7 +26,7 @@ export async function generateMetadata({
       url: `${websiteUrl}collections/${dress.slug}`,
       images: [
         {
-          url: `${websiteUrl}${imagePath}`,
+          url: `${websiteUrl}${websitePreview}`,
           width: 756,
           height: 1133,
           alt: dress.name,
@@ -39,7 +37,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: dress.name,
       description: dress.description?.split("\n")[0] || "",
-      images: [`${websiteUrl}${imagePath}`],
+      images: [`${websiteUrl}${websitePreview}`],
     },
   };
 }

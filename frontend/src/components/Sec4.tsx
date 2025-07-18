@@ -26,7 +26,7 @@ export default function Sec4() {
         className="md:absolute px-4 md:pl-0 md:pr-8 lg:pr-16 xl:pr-32 2xl:pr-64 flex flex-col gap-5 md:gap-10 md:top-1/2 md:-translate-y-1/2 md:left-1/2 py-10 md:py-0 bg-[url('/images/last-sec-background.png')] bg-cover bg-center bg-no-repeat
 "
       >
-        <h1 className="text-xl md:text-2xl lg:text-4xl">THE ARCHIVE</h1>
+        <h2 className="text-xl md:text-2xl lg:text-4xl">THE ARCHIVE</h2>
         <p className="lg:text-xl">
           A curated showcase of couture and ready-to-wear creations. Every
           design tells a story of precision, emotion, and elevated

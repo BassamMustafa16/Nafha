@@ -1,3 +1,47 @@
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { dressSlug: string };
+}): Promise<Metadata> {
+  const dress = data.find((dress) => dress.slug === params.dressSlug);
+
+  if (!dress) {
+    return {
+      title: "Dress not found",
+    };
+  }
+
+  const websiteUrl = "https://nafha-bassammustafa16s-projects.vercel.app/";
+  const imagePath = `/products/${dress.name}/hero.png`;
+
+  return {
+    title: dress.name,
+    description: dress.description?.split("\n")[0] || "Explore our exclusive dress collection.",
+    openGraph: {
+      title: dress.name,
+      description: dress.description?.split("\n")[0] || "",
+      url: `${websiteUrl}collections/${dress.slug}`,
+      images: [
+        {
+          url: `${websiteUrl}${imagePath}`,
+          width: 756,
+          height: 1133,
+          alt: dress.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dress.name,
+      description: dress.description?.split("\n")[0] || "",
+      images: [`${websiteUrl}${imagePath}`],
+    },
+  };
+}
+
+
 import PagesHeader from "@/components/PagesHeader";
 import { data } from "@/app/constants/dressesData";
 import { notFound } from "next/navigation";
@@ -17,16 +61,18 @@ export default async function CollectionInnerPage({
   if (!dress) return notFound();
 
   return (
-    <main className="flex flex-col gap-10 md:gap-0">
+    <>
       <PagesHeader
         image={`products/${dress.name}/header`}
         heading="COLLECTIONS"
         text={dress.name}
       />
-      <Sec1 name={dress.name} description={dress.description} />
-      <Video name={dress.name} />
-      <Gallery name={dress.name} />
-      <Slider name={dress.name} />
-    </main>
+      <main className="flex flex-col gap-10 md:gap-0">
+        <Sec1 name={dress.name} description={dress.description} />
+        <Video name={dress.name} />
+        <Gallery name={dress.name} />
+        <Slider name={dress.name} />
+      </main>
+    </>
   );
 }

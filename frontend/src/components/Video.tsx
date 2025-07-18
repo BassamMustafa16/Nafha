@@ -20,7 +20,7 @@ export default function Video() {
   }, []);
 
   return (
-    <section className="relative w-full aspect-[0.673] md:aspect-auto md:h-[100vh]">
+    <header className="relative w-full aspect-[0.673] md:aspect-auto md:h-[100vh]">
       <video
         src={videoSrc}
         autoPlay
@@ -43,6 +43,6 @@ export default function Video() {
           </button>
         </Link>
       </div>
-    </section>
+    </header>
   );
 }

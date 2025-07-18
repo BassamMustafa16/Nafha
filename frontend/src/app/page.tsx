@@ -1,46 +1,57 @@
 // Page.tsx
+import { websiteUrl, websitePreview } from "./constants/metaData";
 import Sec1 from "@/components/Sec1";
 import Sec2 from "@/components/Sec2";
 import Sec3 from "@/components/Sec3";
 import Sec4 from "@/components/Sec4";
 import Video from "@/components/Video";
 import Slider from "@/components/Slider";
-import Head from "next/head";
+
+export const metadata = {
+  title:
+    "Nafha Thabet | Soirée Collection – Bold Couture Gowns for Unforgettable Moments",
+  description:
+    "Step into Nafha Thabet’s Soirée Collection – a world of bold couture gowns crafted with luxury, individuality, and fearless femininity. Discover dramatic silhouettes, intricate details, and timeless elegance.",
+  keywords: [
+    "couture gowns",
+    "Nafha Thabet",
+    "Soirée Collection",
+    "luxury dresses",
+    "fashion designer",
+    "evening wear",
+    "haute couture",
+  ],
+  openGraph: {
+    title: "Nafha Thabet | Soirée Collection – Bold Couture Gowns",
+    description:
+      "Explore dramatic silhouettes and bold femininity with Nafha Thabet’s Soirée Collection. Where every stitch speaks luxury and individuality.",
+    url: websiteUrl,
+    siteName: "Nafha Thabet",
+    images: [
+      {
+        url: `${websiteUrl}${websitePreview}`, // Update this path
+        width: 1200,
+        height: 630,
+        alt: "Soirée Collection Couture Gown",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nafha Thabet | Soirée Collection – Bold Couture Gowns",
+    description:
+      "Discover couture evening gowns crafted to turn heads – Nafha Thabet’s Soirée Collection is made for unforgettable entrances.",
+    images: [`${websiteUrl}${websitePreview}`],
+  },
+  metadataBase: new URL(websiteUrl),
+};
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Soirée Collection | Modern Couture & Timeless Elegance</title>
-        <meta
-          name="description"
-          content="Explore our Soirée Collection - a celebration of modern opulence and timeless femininity, featuring couture gowns designed for unforgettable entrances."
-        />
-        <meta
-          name="keywords"
-          content="Soirée Collection, couture, gown, fashion designer, elegant dresses, modern couture"
-        />
-        {/* Open Graph data */}
-        <meta
-          property="og:title"
-          content="Soirée Collection | Modern Couture & Timeless Elegance"
-        />
-        <meta
-          property="og:description"
-          content="Explore the Soirée Collection, a range of couture gowns with intricate designs, perfect for making an unforgettable entrance."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.yourfashionbrand.com/" />
-        <meta
-          property="og:image"
-          content="https://www.yourfashionbrand.com/preview-image.jpg"
-        />
-        {/* Canonical link */}
-        <link rel="canonical" href="https://www.yourfashionbrand.com/" />
-      </Head>
-
+      <Video />
       <main className="flex flex-col">
-        <Video />
         <Sec1 />
         <Slider />
         <Sec2 />

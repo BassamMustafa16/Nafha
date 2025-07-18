@@ -10,12 +10,12 @@ export default function PagesHeader({
   text,
 }: PagesHeaderProps) {
   return (
-    <div className="relative">
+    <header className="relative">
       {/* Image */}
       <div className="relative w-full aspect-[1.5] md:aspect-[2] lg:aspect-[2.5] xl:aspect-[2.74]">
         <Image
           src={`/${image}.png`}
-          alt="Header"
+          alt="Nafha Thabet brand header background"
           fill
           sizes="100vw"
           className="object-cover object-center"
@@ -36,14 +36,14 @@ export default function PagesHeader({
             lg:h-[calc(100%-110px)] 
           "
       >
-        <h1 className="text-lg md:text-xl lg:text-2xl xl:text-4xl">
+        <h2 className="text-lg md:text-xl lg:text-2xl xl:text-4xl">
           {heading}
-        </h1>
+        </h2>
         <p className="lg:text-lg xl:text-2xl text-center">{text}</p>
       </div>
 
       {/* Color overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
-    </div>
+    </header>
   );
 }

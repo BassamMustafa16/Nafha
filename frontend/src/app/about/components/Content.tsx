@@ -1,6 +1,6 @@
 export default function Content() {
   return (
-    <section className="flex flex-col gap-5 mt-10 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+    <article className="flex flex-col gap-5 mt-10 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
       <h1 className="text-xl lg:text-3xl xl:text-4xl">About Us</h1>
       <p className="text-sm lg:text-lg xl:text-xl">
         Nafha Thabet is a haute couture brand born from a deep reverence for
@@ -28,6 +28,6 @@ export default function Content() {
         Our designs are made for those who dare to stand out, step forward, and
         wear their power with pride.
       </p>
-    </section>
+    </article>
   );
 }

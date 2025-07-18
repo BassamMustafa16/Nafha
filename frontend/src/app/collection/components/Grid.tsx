@@ -11,7 +11,7 @@ export default function Grid() {
     >
       {data.map((dress) => (
         <Link key={dress.name} href={`/collection/${dress.slug}`}>
-          <div className="relative rounded-md overflow-hidden">
+          <article className="relative rounded-md overflow-hidden">
             {/* Image */}
             <div className="">
               <Image
@@ -24,9 +24,9 @@ export default function Grid() {
 
             {/* Name */}
             <div className="absolute lg:text-lg xl:text-xl text-white w-full text-center top-13/16 px-3 left-1/2 -translate-x-1/2">
-              <p>{dress.name}</p>
+              <h3>{dress.name}</h3>
             </div>
-          </div>
+          </article>
         </Link>
       ))}
     </section>

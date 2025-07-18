@@ -35,9 +35,10 @@ export default function Video({ name }: Dress) {
 
       {/* Play button */}
       {!playing && (
-        <div
+        <button
           className="w-20 lg:w-30 aspect-square absolute inset-0 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 cursor-pointer z-10"
           onClick={handlePlay}
+          aria-label="Play video"
         >
           <Image
             src="/icons/play.png"
@@ -45,7 +46,7 @@ export default function Video({ name }: Dress) {
             width={216}
             height={216}
           />
-        </div>
+        </button>
       )}
     </div>
   );

@@ -6,7 +6,7 @@ export default function Gallery({ name }: Dress) {
   return (
     <div className="md:flex flex-row gap-2 hidden">
       {["01", "hero", "02"].map((image, i) => (
-        <div key={i} className="w-full h-auto max-h-screen">
+        <section key={i} className="w-full h-auto max-h-screen">
           <Image
             src={`/products/${name}/${image}.png`}
             alt="Hero Image"
@@ -14,7 +14,7 @@ export default function Gallery({ name }: Dress) {
             height={1133}
             className="w-full h-auto"
           />
-        </div>
+        </section>
       ))}
     </div>
   );

@@ -24,12 +24,12 @@ export default function Slider({ name }: Dress) {
         }}
         breakpoints={{ 767: { slidesPerView: 2 }, 1023: { slidesPerView: 3 } }}
       >
-        {["01", "hero", "02"].map((image, i) => (
+        {["01", "03", "02"].map((image, i) => (
           <SwiperSlide key={i}>
             <div className="relative">
               <div key={i} className="w-full h-auto max-h-screen">
                 <Image
-                  src={`/products/${name}/${image}.png`}
+                  src={`/products/${name}/${image}.jpg`}
                   alt="Hero Image"
                   width={756}
                   height={1133}

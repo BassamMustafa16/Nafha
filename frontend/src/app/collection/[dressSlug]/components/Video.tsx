@@ -12,6 +12,7 @@ export default function Video({ name }: Dress) {
           src={`/products/${name}/video.mp4`}
           muted
           loop
+          playsInline
           controls={false}
           autoPlay
           className="w-full h-full object-cover"

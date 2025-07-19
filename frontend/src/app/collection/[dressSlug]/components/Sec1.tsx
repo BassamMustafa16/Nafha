@@ -1,36 +1,54 @@
+// Improved Sec1 Component - Better responsive design
 import Image from "next/image";
+
 type Dress = {
   name: string;
   description?: string;
 };
+
 export default function Sec1({ name, description }: Dress) {
   return (
-    <div className="flex flex-col md:flex-row items-center min-h-fit max-h-screen gap-10 md:gap-0">
-      {/* Text */}
-      <section className="flex flex-col gap-5 xl:gap-8 justify-center px-4 md:px-8 lg:px-16 xl:pl-32 2xl:pl-64 md:py-10 h-fit flex-1 ">
-        <h1 className="text-xl lg:text-3xl xl:text-4xl">{name}</h1>
-        {description?.split("\n").map((paragraph, i) => (
-          <p key={i} className="text-sm lg:text-lg xl:text-2xl">
-            {paragraph}
-          </p>
-        ))}
+    <section className="container mx-auto px-4 lg:px-8">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
+        {/* Text Content */}
+        <div className="space-y-6 lg:space-y-8 order-2 lg:order-1">
+          <div className="space-y-4 lg:space-y-6">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light tracking-wide">
+              {name}
+            </h1>
+            
+            {description && (
+              <div className="space-y-4 text-gray-600">
+                {description.split("\n").map((paragraph, i) => (
+                  <p key={i} className="text-base md:text-lg lg:text-xl leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            )}
+          </div>
 
-        {/* Button */}
-        <button className="border py-3 px-5 text-sm lg:text-lg xl:text-2xl w-fit hover:bg-black hover:text-white transition-all duration-300">
-          Request Dress
-        </button>
-      </section>
+          {/* CTA Button */}
+          <button className="group border border-gray-900 px-8 py-4 text-sm md:text-base lg:text-lg font-medium uppercase tracking-wider transition-all duration-300 hover:bg-gray-900 hover:text-white">
+            <span className="relative">
+              Request Dress
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
+            </span>
+          </button>
+        </div>
 
-      {/* Image */}
-      <div className="relative w-full aspect-square md:aspect-[0.75] lg:aspect-[0.8] xl:aspect-[0.85] 2xl:aspect-[0.9] max-h-screen flex-1">
-        <Image
-          src={`/products/${name}/hero.png`}
-          alt="Hero Image"
-          fill
-          sizes="100vw"
-          className="w-full h-full object-cover"
-        />
+        {/* Hero Image */}
+        <div className="relative aspect-[3/4] lg:aspect-[4/5] order-1 lg:order-2">
+          <Image
+            src={`/products/${name}/hero.png`}
+            alt={`${name} hero image`}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
+            className="object-cover object-center"
+            priority
+          />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

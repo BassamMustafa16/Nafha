@@ -48,8 +48,8 @@ import { notFound } from "next/navigation";
 import Sec1 from "./components/Sec1";
 import Video from "./components/Video";
 import Gallery from "./components/Gallery";
-import Slider from "./components/Slider";
 
+// Updated Main Layout with consistent spacing and better structure
 export default async function CollectionInnerPage({
   params,
 }: {
@@ -61,16 +61,20 @@ export default async function CollectionInnerPage({
   if (!dress) return notFound();
 
   return (
-    <main className="flex flex-col gap-6 md:gap-0 relative"> {/* Reduce gap and add relative positioning */}
+    <main className="min-h-screen">
+      {/* Header - Full width, no spacing issues */}
       <PagesHeader
         image={`products/${dress.name}/header`}
         heading="COLLECTIONS"
         text={dress.name}
       />
-      <Sec1 name={dress.name} description={dress.description} />
-      <Video name={dress.name} />
-      <Gallery name={dress.name} />
-      <Slider name={dress.name} />
+      
+      {/* Content sections with consistent spacing */}
+      <div className="space-y-12 lg:space-y-16">
+        <Sec1 name={dress.name} description={dress.description} />
+        <Video name={dress.name} />
+        <Gallery name={dress.name} />
+      </div>
     </main>
   );
 }

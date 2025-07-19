@@ -8,19 +8,22 @@ type Dress = {
 
 export default function Sec1({ name, description }: Dress) {
   return (
-    <section className="container mx-auto px-4 lg:px-8">
+    <section className="mx-auto px-4 lg:px-0 lg:pl-8 xl:pl-16">
       <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
         {/* Text Content */}
-        <div className="space-y-6 lg:space-y-8 order-2 lg:order-1">
+        <div className="space-y-6 lg:space-y-8 mt-8 lg:mt-0">
           <div className="space-y-4 lg:space-y-6">
             <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light tracking-wide">
               {name}
             </h1>
-            
+
             {description && (
               <div className="space-y-4 text-gray-600">
                 {description.split("\n").map((paragraph, i) => (
-                  <p key={i} className="text-base md:text-lg lg:text-xl leading-relaxed">
+                  <p
+                    key={i}
+                    className="text-base md:text-lg lg:text-xl leading-relaxed"
+                  >
                     {paragraph}
                   </p>
                 ))}
@@ -38,7 +41,7 @@ export default function Sec1({ name, description }: Dress) {
         </div>
 
         {/* Hero Image */}
-        <div className="relative aspect-[3/4] lg:aspect-[4/5] order-1 lg:order-2">
+        <div className="relative aspect-[3/4] lg:aspect-[4/5]">
           <Image
             src={`/products/${name}/hero.png`}
             alt={`${name} hero image`}

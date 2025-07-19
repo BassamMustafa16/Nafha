@@ -8,7 +8,7 @@ export default function Gallery({ name }: Dress) {
       {["01", "hero", "02"].map((image, i) => (
         <section key={i} className="w-full h-auto max-h-screen">
           <Image
-            src={`/products/${name}/${image}.png`}
+            src={`/products/${name}/${image}.jpg`}
             alt="Hero Image"
             width={756}
             height={1133}

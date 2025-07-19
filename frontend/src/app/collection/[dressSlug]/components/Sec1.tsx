@@ -24,7 +24,7 @@ export default function Sec1({ name, description }: Dress) {
       {/* Image */}
       <div className="w-full h-auto max-h-screen">
         <Image
-          src={`/products/${name}/hero.png`}
+          src={`/products/${name}/hero.jpg`}
           alt="Hero Image"
           width={756}
           height={1133}

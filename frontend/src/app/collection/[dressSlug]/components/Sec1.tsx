@@ -24,11 +24,11 @@ export default function Sec1({ name, description }: Dress) {
       {/* Image */}
       <div className="w-full h-auto max-h-screen">
         <Image
-          src={`/products/${name}/hero.jpg`}
+          src={`/products/${name}/hero.png`}
           alt="Hero Image"
           width={756}
           height={1133}
-          className="w-full h-auto"
+          className="w-full h-auto object-contain object-bottom"
         />
       </div>
     </div>

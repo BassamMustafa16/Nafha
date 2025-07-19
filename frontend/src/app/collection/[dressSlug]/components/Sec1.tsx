@@ -22,12 +22,12 @@ export default function Sec1({ name, description }: Dress) {
       </section>
 
       {/* Image */}
-      <div className="w-full md:aspect-[0.75] lg:aspect-[0.8] xl:aspect-[0.85] 2xl:aspect-[0.9] max-h-screen flex-1">
+      <div className="relative w-full aspect-square md:aspect-[0.75] lg:aspect-[0.8] xl:aspect-[0.85] 2xl:aspect-[0.9] max-h-screen flex-1">
         <Image
           src={`/products/${name}/hero.png`}
           alt="Hero Image"
-          width={1200}
-          height={1200}
+          fill
+          sizes="100vw"
           className="w-full h-full object-cover"
         />
       </div>

@@ -33,7 +33,7 @@ export default function Slider({ name }: Dress) {
                   alt="Hero Image"
                   width={756}
                   height={1133}
-                  className="w-full h-auto"
+                  className="w-full h-auto "
                 />
               </div>
             </div>

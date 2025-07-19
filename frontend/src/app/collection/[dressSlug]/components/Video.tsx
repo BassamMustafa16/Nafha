@@ -18,14 +18,14 @@ export default function Video({ name }: Dress) {
   };
 
   return (
-    <div className="relative">
+    <div className="relative mt-6 md:mt-0"> {/* Add margin-top for mobile spacing */}
       <video
         ref={videoRef}
         src={`/products/${name}/video.mp4`}
         muted
         loop
         controls={playing}
-        className="w-full max-h-screen aspect-[16/9] object-cover"
+        className="w-full h-[60vh] md:h-[70vh] lg:max-h-screen object-cover" // Fixed heights for mobile, viewport for larger screens
       />
 
       {/* Dark overlay behind the play button */}

@@ -61,7 +61,7 @@ export default async function CollectionInnerPage({
   if (!dress) return notFound();
 
   return (
-    <main className="flex flex-col gap-10 md:gap-0">
+    <main className="flex flex-col gap-6 md:gap-0 relative"> {/* Reduce gap and add relative positioning */}
       <PagesHeader
         image={`products/${dress.name}/header`}
         heading="COLLECTIONS"

@@ -25,7 +25,7 @@ export default function Video({ name }: Dress) {
         muted
         loop
         controls={playing}
-        className="w-full max-h-screen object-cover"
+        className="w-full max-h-screen aspect-[16/9] object-cover"
       />
 
       {/* Dark overlay behind the play button */}

@@ -27,7 +27,7 @@ export default function Gallery({ name }: Dress) {
                 alt={`${name} image ${i + 1}`}
                 fill
                 sizes="256px"
-                className="object-cover object-center rounded-lg"
+                className="object-cover object-center"
               />
             </div>
           ))}

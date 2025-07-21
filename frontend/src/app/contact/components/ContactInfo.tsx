@@ -1,6 +1,6 @@
 export default function ContactInfo() {
   return (
-    <div className="flex flex-col gap-5 lg:gap-8 bg-black text-white px-4 md:px-8 lg:pr-16 xl:pr-32 2xl:pr-64 py-10 lg:pt-15">
+    <div className="flex flex-col gap-5 lg:gap-8 bg-black text-white px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 py-10 lg:pt-15 w-1/2">
       <h2 className="text-2xl lg:text-4xl xl:text-5xl">Contact info</h2>
       <p className="text-sm lg:text-lg xl:text-xl">Feel free to reach us</p>
       <p className="text-sm lg:text-lg xl:text-xl">

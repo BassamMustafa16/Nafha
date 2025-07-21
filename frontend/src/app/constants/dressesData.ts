@@ -41,9 +41,9 @@ export const data = [
   },
   {
     id: 6,
-    name: "Satin Eclipse Gown",
-    slug: "satin-eclipse-gown",
-    image: "/images/collection/Satin Eclipse Gown.png",
+    name: "Eclipse Gown",
+    slug: "eclipse-gown",
+    image: "/images/collection/Eclipse Gown.png",
     description:
       "Dramatic yet refined, this deep obsidian black gown celebrates structured sensuality with a sculpted silhouette and bold flair.\nThe sweetheart neckline is encrusted with shimmering crystal embroidery, while the daring thigh-high slit, adorned with jewel-studded mesh, evokes unapologetic confidence.\nComplete with voluminous off-shoulder sleeves, this look is made for diva grand entrances and unforgettable exits.",
   },

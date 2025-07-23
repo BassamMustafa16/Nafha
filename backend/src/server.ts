@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
-import { testDatabaseConnection } from "./db";
+// import { testDatabaseConnection } from "./db";
 import dotenv from "dotenv";
 import { promisePool } from "./db";
 
@@ -23,22 +23,22 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Test database connection on startup
-testDatabaseConnection();
+// testDatabaseConnection();
 
 // Basic route
-app.get("/", async (req: Request, res: Response) => {
-  try {
-    const [rows] = await promisePool.query("SELECT * FROM products");
-    res.json({ message: "Products fetched successfully", data: rows });
-  } catch (error) {
-    console.error("Error fetching products:", (error as Error).message);
-    res.status(500).json({
-      success: false,
-      message: "Error fetching products",
-      error: (error as Error).message,
-    });
-  }
-});
+// app.get("/", async (req: Request, res: Response) => {
+//   try {
+//     const [rows] = await promisePool.query("SELECT * FROM products");
+//     res.json({ message: "Products fetched successfully", data: rows });
+//   } catch (error) {
+//     console.error("Error fetching products:", (error as Error).message);
+//     res.status(500).json({
+//       success: false,
+//       message: "Error fetching products",
+//       error: (error as Error).message,
+//     });
+//   }
+// });
 
 // Routes
 app.use("/api/contact", contactRouter);

@@ -11,9 +11,9 @@ type Dress = {
 export default function Sec1({ name, description, slug }: Dress) {
   return (
     <section className="mx-auto px-4 lg:px-0 lg:pl-8 xl:pl-16">
-      <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center lg:items-start">
         {/* Text Content */}
-        <div className="space-y-6 lg:space-y-8 mt-8 lg:mt-0">
+        <div className="space-y-6 lg:space-y-8 mt-8 lg:mt-0 lg:pt-8">
           <div className="space-y-4 lg:space-y-6">
             <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light tracking-wide">
               {name}

@@ -61,6 +61,7 @@ export const data = [
     name: "Sunlit Grace Draped",
     slug: "sunlit-grace-draped",
     image: "/images/collection/Sunlit Grace Draped.png",
-    description: "",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut semper neque, eu luctus lacus.\nEtiam vitae tellus consectetur, faucibus orci aliquam, aliquam lorem.\nAenean bibendum, lectus eget rutrum euismod, nisl ipsum facilisis lectus, sed bibendum sem ante nec leo. Sed arcu leo.",
   },
 ];

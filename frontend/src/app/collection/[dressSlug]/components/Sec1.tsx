@@ -1,12 +1,14 @@
 // Improved Sec1 Component - Better responsive design
 import Image from "next/image";
+import Link from "next/link";
 
 type Dress = {
   name: string;
   description?: string;
+  slug: string;
 };
 
-export default function Sec1({ name, description }: Dress) {
+export default function Sec1({ name, description, slug }: Dress) {
   return (
     <section className="mx-auto px-4 lg:px-0 lg:pl-8 xl:pl-16">
       <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
@@ -32,12 +34,14 @@ export default function Sec1({ name, description }: Dress) {
           </div>
 
           {/* CTA Button */}
-          <button className="group border border-gray-900 px-8 py-4 text-sm md:text-base lg:text-lg font-medium uppercase tracking-wider transition-all duration-300 hover:bg-gray-900 hover:text-white">
-            <span className="relative">
-              Request Dress
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
-            </span>
-          </button>
+          <Link href={`/${slug}`}>
+            <button className="group border border-gray-900 px-8 py-4 text-sm md:text-base lg:text-lg font-medium uppercase tracking-wider transition-all duration-300 hover:bg-gray-900 hover:text-white">
+              <span className="relative">
+                Request Dress
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
+              </span>
+            </button>
+          </Link>
         </div>
 
         {/* Hero Image */}

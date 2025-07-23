@@ -45,23 +45,21 @@ export async function generateMetadata({
 import PagesHeader from "@/components/PagesHeader";
 import { data } from "@/app/constants/dressesData";
 import { notFound } from "next/navigation";
-import Sec1 from "./components/Sec1";
-import Video from "./components/Video";
-import Gallery from "./components/Gallery";
+import ReqForm from "./components/ReqForm";
 
 // Updated Main Layout with consistent spacing and better structure
-export default async function CollectionInnerPage({
+export default async function DressReqPage({
   params,
 }: {
-  params: Promise<{ dressSlug: string }>;
+  params: Promise<{ dressReq: string }>;
 }) {
-  const { dressSlug } = await params;
-  const dress = data.find((dress) => dress.slug === dressSlug);
+  const { dressReq } = await params;
+  const dress = data.find((dress) => dress.slug === dressReq);
 
   if (!dress) return notFound();
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen space-y-6 lg:space-y-10 xl:space-y-12">
       {/* Header - Full width, no spacing issues */}
       <PagesHeader
         image={`products/${dress.name}/header`}
@@ -70,14 +68,16 @@ export default async function CollectionInnerPage({
       />
 
       {/* Content sections with consistent spacing */}
-      <div className="space-y-12 lg:space-y-16">
-        <Sec1
-          name={dress.name}
-          description={dress.description}
-          slug={dress.slug}
-        />
-        <Video name={dress.name} />
-        <Gallery name={dress.name} />
+      <div className="space-y-6 lg:space-y-10 px-4 md:px-0 max-w-[425px] lg:max-w-[700px] xl:max-w-[800px] mx-auto">
+        <div className="space-y-2">
+          <h1 className="text-xl lg:text-3xl xl:text-4xl">
+            Let’s Create Your Dream Dress
+          </h1>
+          <p className="text-sm lg:text-lg xl:text-xl">
+            Describe what you want, and we’ll make it happen.
+          </p>
+        </div>
+        <ReqForm />
       </div>
     </main>
   );

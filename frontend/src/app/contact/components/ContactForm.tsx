@@ -54,7 +54,7 @@ export default function ContactForm() {
       {/* Button */}
       <button
         type="submit"
-        className="text-white bg-black px-5 lg:px-8 py-2 lg:py-3 text-sm lg:text-lg xl:text-xl rounded-md w-fit"
+        className="text-white bg-black px-5 lg:px-8 py-2 lg:py-3 text-sm lg:text-lg xl:text-xl w-fit"
       >
         Book a Private Consultation
       </button>

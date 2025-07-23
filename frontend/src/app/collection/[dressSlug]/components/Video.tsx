@@ -5,6 +5,7 @@ type Dress = {
 };
 
 export default function Video({ name }: Dress) {
+  if (name === "Sunlit Grace Draped") return;
   return (
     <section className="">
       <div className="relative aspect-video lg:aspect-[16/9] bg-gray-100 overflow-hidden max-h-screen w-full">

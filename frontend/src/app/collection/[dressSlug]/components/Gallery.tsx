@@ -60,7 +60,7 @@ export default function Gallery({ name }: Dress) {
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
-          <div className="relative max-w-4xl max-h-full">
+          <div className="relative max-w-4xl max-h-full border-5">
             <Image
               src={selectedImage}
               alt="Gallery image"

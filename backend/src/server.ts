@@ -6,6 +6,7 @@ import { promisePool } from "./db";
 
 // Import routes
 import contactRouter from "./routes/contact";
+import requestRouter from "./routes/request";
 
 dotenv.config();
 
@@ -45,6 +46,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use("/api/contact", contactRouter);
+app.use("/api/request", requestRouter);
 
 // Error handling middleware
 app.use((err: Error, req: Request, res: Response, next: Function) => {

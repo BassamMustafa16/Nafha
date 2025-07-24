@@ -25,66 +25,78 @@ interface ApiResponse {
 
 export default function ReqForm() {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    phone: '',
-    size: '',
-    length: '',
-    custom: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    size: "",
+    length: "",
+    custom: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
-  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | ''>('');
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | "">(
+    ""
+  );
 
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>): void => {
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ): void => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
-    
+
     // Basic validation for required fields
-    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim() || 
-        !formData.size.trim() || !formData.length.trim()) {
-      setSubmitStatus('error');
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.phone.trim() ||
+      !formData.size.trim() ||
+      !formData.length.trim()
+    ) {
+      setSubmitStatus("error");
       return;
     }
 
     setIsSubmitting(true);
-    setSubmitStatus('');
+    setSubmitStatus("");
 
     try {
-      const response = await fetch('/api/request', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/request`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data: ApiResponse = await response.json();
 
       if (response.ok && data.success) {
-        setSubmitStatus('success');
+        setSubmitStatus("success");
         setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          size: '',
-          length: '',
-          custom: '',
-          message: ''
+          name: "",
+          email: "",
+          phone: "",
+          size: "",
+          length: "",
+          custom: "",
+          message: "",
         });
       } else {
-        setSubmitStatus('error');
+        setSubmitStatus("error");
       }
     } catch (error) {
-      console.error('Error sending request:', error);
-      setSubmitStatus('error');
+      console.error("Error sending request:", error);
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -250,18 +262,18 @@ export default function ReqForm() {
           disabled={isSubmitting}
           className="border py-3 px-10 lg:text-xl w-fit hover:bg-black hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {isSubmitting ? 'Submitting...' : 'Submit'}
+          {isSubmitting ? "Submitting..." : "Submit"}
         </button>
       </form>
 
       {/* Status Messages */}
-      {submitStatus === 'success' && (
+      {submitStatus === "success" && (
         <div className="mt-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded">
           {"Request submitted successfully! We'll get back to you soon."}
         </div>
       )}
-      
-      {submitStatus === 'error' && (
+
+      {submitStatus === "error" && (
         <div className="mt-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded">
           Failed to submit request. Please try again or contact us directly.
         </div>

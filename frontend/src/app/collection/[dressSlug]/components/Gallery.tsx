@@ -1,4 +1,3 @@
-// Unified Gallery Component - Works on all devices
 "use client";
 import Image from "next/image";
 import { useState } from "react";
@@ -54,22 +53,26 @@ export default function Gallery({ name }: Dress) {
         ))}
       </div>
 
-      {/* Lightbox Modal */}
+      {/* Lightbox Modal - Fixed */}
       {selectedImage && (
         <div
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
-          <div className="relative max-w-4xl max-h-full border-5">
+          <div 
+            className="relative w-full h-full flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
             <Image
               src={selectedImage}
               alt="Gallery image"
               width={800}
               height={1200}
-              className="max-w-full max-h-full object-contain"
+              className="max-w-full max-h-full w-auto h-auto object-contain"
+              style={{ maxHeight: 'calc(100vh - 2rem)' }}
             />
             <button
-              className="absolute top-4 right-4 text-white text-2xl hover:text-gray-300"
+              className="absolute top-4 right-4 text-white text-2xl hover:text-gray-300 z-10"
               onClick={() => setSelectedImage(null)}
             >
               ×

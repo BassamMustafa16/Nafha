@@ -11,7 +11,7 @@ type Dress = {
 export default function Sec1({ name, description, slug }: Dress) {
   return (
     <section className="mx-auto px-4 lg:px-0 lg:pl-8 xl:pl-16">
-      <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center lg:items-start">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
         {/* Text Content */}
         <div className="space-y-6 lg:space-y-8 mt-8 lg:mt-0 lg:pt-8">
           <div className="space-y-4 lg:space-y-6">
@@ -45,7 +45,7 @@ export default function Sec1({ name, description, slug }: Dress) {
         </div>
 
         {/* Hero Image */}
-        <div className="relative aspect-[3/4] lg:aspect-[4/5]">
+        <div className="relative aspect-[3/4] lg:aspect-[4/5] self-start">
           <Image
             src={`/products/${name}/hero.png`}
             alt={`${name} hero image`}

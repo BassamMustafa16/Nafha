@@ -4,10 +4,10 @@ import { websiteUrl, websitePreview } from "@/app/constants/metaData";
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ dressSlug: string }>; // Changed: params is now a Promise
+  params: Promise<{ dressReq: string }>; // Changed: params is now a Promise
 }): Promise<Metadata> {
-  const { dressSlug } = await params; // Changed: await the params
-  const dress = data.find((dress) => dress.slug === dressSlug);
+  const { dressReq } = await params; // Changed: await the params
+  const dress = data.find((dress) => dress.slug === dressReq);
 
   if (!dress) {
     return {

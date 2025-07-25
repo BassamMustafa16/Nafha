@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function Sec2() {
   return (
-    <section className="relative mt-10" style={{ height: "100dvh" }}>
+    <section className="relative mt-10 h-[600px] min-h-[600px] lg:h-screen">
       {/* Sticky Parallax Image */}
-      <div className="relative w-full" style={{ height: "100dvh" }}>
+      <div className="relative w-full h-full">
         <Image
           src="/images/sec 02.png"
           alt="sec 02"
